@@ -1,5 +1,3 @@
-// rss-parser
-// https://www.npmjs.com/package/rss-parser
 const express = require('express'),
       Parser = require('rss-parser'),
       cheerio = require('cheerio'),
@@ -12,7 +10,7 @@ const getSourceInfo = require('./routes/get-source-info'),
       getSourceText = require('./routes/get-source-text');
 
 let corsOptions = {
-  origin: 'http://127.0.0.1:3000',
+  origin: process.env.CLIENT_URL,
   optionsSuccessStatus: 200,
   maxAge: 3600,
   credentials: true
