@@ -30,6 +30,7 @@ module.exports = function(app, parser) {
             const feedsData = feedsDataModify(parsedData);
 
             if (parsedData) {
+              res.set('Access-Control-Allow-Origin', '*');
               res.json({ parsedData: feedsData });
             } else {
               res.json({ parsedData: null });
