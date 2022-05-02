@@ -8,7 +8,7 @@ module.exports = function(app, cheerio, needle) {
       .then(data => {
         const $ = cheerio.load(data.body, { decodeEntities: false });
         const result = $.html('p');
-
+        res.set('Access-Control-Allow-Origin', '*');
         res.json( formatSourceTextImgUrl(result, feedLink) );
       })
       .catch(error => console.log(error.message));
