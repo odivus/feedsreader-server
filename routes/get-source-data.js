@@ -26,7 +26,6 @@ module.exports = function(app, parser) {
             });
 
             const parsedData = parsedDataModify(resultFulfilled);
-
             const feedsData = feedsDataModify(parsedData);
 
             if (parsedData) {
