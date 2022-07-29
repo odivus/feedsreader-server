@@ -10,7 +10,7 @@ const getSourceInfo = require('./routes/get-source-info'),
       getSourceText = require('./routes/get-source-text');
 
 let corsOptions = {
-  origin: process.env.CLIENT_URL,
+  origin: false,
   optionsSuccessStatus: 200,
   maxAge: 3600,
   credentials: true
