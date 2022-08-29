@@ -1,13 +1,10 @@
-const express = require('express'),
-      Parser = require('rss-parser'),
-      cheerio = require('cheerio'),
-      needle = require('needle'),
-      cors = require('cors'),
-      app = express();
+const express = require('express');
+const cors = require('cors');
+const app = express();
 
-const getSourceInfo = require('./routes/get-source-info'),
-      getSourceData = require('./routes/get-source-data');
-      getSourceText = require('./routes/get-source-text');
+const getSourceInfo = require('./routes/get-source-info');
+const getSourceData = require('./routes/get-source-data');
+const getSourceText = require('./routes/get-source-text');
 
 let corsOptions = {
   origin: false,
@@ -16,19 +13,12 @@ let corsOptions = {
   credentials: true
 };
 
-const parser = new Parser({
-  customFields: {
-    feed: ['otherTitle'],
-    item: ['fulltext']
-  }
-});
-
 app.use(cors(corsOptions));
 app.use(express.json());
 
-getSourceInfo(app, parser);
-getSourceData(app, parser);
-getSourceText(app, cheerio, needle);
+app.use(getSourceInfo);
+app.use(getSourceData);
+app.use(getSourceText);
 
 app.disable('x-powered-by');
 app.listen(process.env.PORT || 8080, () => console.log('Server start'));
