@@ -40,4 +40,4 @@ module.exports = router.post('/data', function (req, res) {
         })
         .catch(error => console.error(error.message));
       })
-    })
+});

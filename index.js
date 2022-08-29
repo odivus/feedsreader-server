@@ -22,4 +22,3 @@ app.use(getSourceText);
 
 app.disable('x-powered-by');
 app.listen(process.env.PORT || 8080, () => console.log('Server start'));
-

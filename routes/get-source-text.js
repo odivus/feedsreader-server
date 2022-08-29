@@ -17,4 +17,4 @@ module.exports = router.post('/text', function (req, res) {
       res.json( formatSourceTextImgUrl(result, feedLink) );
     })
     .catch(error => console.log(error.message));
-})
+});
