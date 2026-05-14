@@ -1,4 +1,4 @@
-# feedsreader-server – серверная часть приложения для чтения rss-фидов
+# feedsreader-server – api для чтения rss-фидов
 Сервер принимает запросы с телом в формате JSON, в которых массив ссылок на источники rss-фидов, например:<br>
 ![Post запрос к серверу](https://github.com/odivus/readme-img/blob/b8c984b7649d1987c33d118efc62e33be23745a8/feedsreader-server-post-body.png)
 
