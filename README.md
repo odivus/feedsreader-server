@@ -7,8 +7,6 @@
 	]
 }`
 
-В ответе возвращает данные rss источников, переданных в запросе, для клиентской части приложения, например:<br>
-![Ответ сервера](https://github.com/odivus/readme-img/blob/b8c984b7649d1987c33d118efc62e33be23745a8/feedsreader-server-response.png)
-
+В ответе возвращает данные rss источников, переданных в запросе, для клиентской части приложения.
 ## Стек
 Express, cors, rss-parser, cheerio, needle
